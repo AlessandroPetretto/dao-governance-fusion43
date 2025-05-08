@@ -24,12 +24,21 @@ Definire un modello **etico, trasparente e tracciabile** di governance decentral
 
 ---
 
-### ⚙️ Componenti tecnici
+### ⚙️ Componenti tecnici aggiornati (v1.1)
 
-- Smart contract (Ethereum / L2)  
-- Prompt AI codificati e firmati  
-- IPFS per archiviazione documentale  
-- Interfaccia utente (da sviluppare) per partecipazione semplice e trasparente
+Fusion.43 ora integra una suite completa di smart contract OpenZeppelin:
+
+- `FusionToken.sol`: token ERC20Votes usato per il potere di voto nel DAO
+- `FusionGovernor.sol`: logica di proposta, quorum e voto
+- `FusionTimelock.sol`: controller di sicurezza per ritardo esecuzioni
+
+📁 I contratti si trovano nella cartella `/contracts`  
+📦 Installa le dipendenze con:
+```bash
+npm install --save-dev hardhat @openzeppelin/contracts
+```
+
+📄 Versione Zenodo: [10.5281/zenodo.15366888](https://doi.org/10.5281/zenodo.15366888)
 
 ---
 
