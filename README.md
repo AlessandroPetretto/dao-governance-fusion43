@@ -17,7 +17,7 @@ To ensure this promise is upheld over time, this repository proposes a model of 
 ## 🔐 What This Repository Contains
 
 - 📜 Governance Principles (Ethical, Operational)
-- 🧱 DAO Smart Contracts (Skeletons, Templates)
+- 🧱 DAO Smart Contracts (FusionToken, FusionGovernor, FusionTimelock)
 - 👤 Guardian Roles & Identity Verification Models
 - 📊 Voting + Proposals Architecture
 - 🔍 Fusion.43 Compatibility Interfaces (IPFS, Blockchain Anchoring)
@@ -34,6 +34,30 @@ To ensure this promise is upheld over time, this repository proposes a model of 
 
 ---
 
+## ⚙️ Smart Contracts Overview
+
+Fusion.43 includes a modular DAO contract suite using [OpenZeppelin](https://docs.openzeppelin.com/contracts) standards:
+
+### 🔹 `FusionToken.sol`
+> ERC20Votes-compatible token used to determine governance power within the DAO.
+
+### 🔹 `FusionGovernor.sol`
+> Core logic for proposal creation, voting, quorum checking, and execution of DAO decisions.
+
+### 🔹 `FusionTimelock.sol`
+> Timelock controller ensuring that decisions are delayed before execution to allow transparency and safety.
+
+📁 All contracts are located in `/contracts`.
+
+📦 To install dependencies:
+```bash
+npm install --save-dev hardhat @openzeppelin/contracts
+```
+
+🧪 To test or deploy, refer to the upcoming `deploy.js` script in `/scripts`.
+
+---
+
 ## 🧑‍⚖️ Become a Guardian
 
 > _"A Guardian is not a user of Fusion.43. They are its memory."_  
@@ -45,17 +69,4 @@ Join the early DAO council, contribute to protocol design, and shape how ethics 
 
 - [Fusion.43 Manifesto](https://github.com/AlessandroPetretto/fusion-43-manifesto-gpt45)
 - [LegacyGPT Methodology](https://github.com/AlessandroPetretto/legacygpt-methodology)
-- DOI: [10.5281/zenodo.15338051](https://doi.org/10.5281/zenodo.15338051)
-
----
-
-## 🛠 Setup (coming soon)
-To deploy the DAO locally or on-chain:  
-`/docs/setup.md`
-
----
-
-## 🧠 Side note  
-This isn’t just governance.  
-It’s the **immune system** of a value-aware AI.
-
+- DOI: [10.5281/zenodo.15366888](https://doi.org/10.5281/zenodo.15366888) — Version 1.1 *(includes smart contracts)*
